@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #131415;
+}
+
+.menu-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu-toggle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    transition: transform 1.5s;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid #232423;
+    box-shadow: 2px 2px 2px 2px rgba(0 0 0 / 50%), -2px -2px 1px rgba(100 100 100 / 20%),
+        inset 2px 2px 2px 2px rgba(0 0 0 /50%), inset -2px -2px 2px 1px rgba(100 100 100 / 20%);
+    background-color: #131415;
+
+}
+
+.menu-container li a {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: white;
+    border: 2px solid #232423;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 1px 1px 2px 2px rgba(0 0 0 / 50%), -2px -2px 1px rgba(100 100 100 / 20%),
+        inset 1px 1px 2px 2px rgba(0 0 0 /50%), inset -2px -2px 2px 1px rgba(100 100 100 / 20%)
+}
+
+.menu-container li {
+    list-style: none;
+    position: absolute;
+    transition: 0.8s;
+    transform-origin: 200px;
+    left: 0;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(170px);
+}
+
+.menu-container.active .menu-toggle {
+    transform: rotate(315deg);
+
+}
+
+.menu-container.active li {
+    transform: rotate(calc(365deg/ 8* var(--i)));
+
+}
+
+.menu-container.active li:nth-of-type(2) a i {
+    transform: rotate(310deg)
+}
+
+.menu-container.active li:nth-of-type(3) a i {
+    transform: rotate(270deg)
+}
+
+.menu-container.active li:nth-of-type(5) a i {
+    transform: rotate(170deg)
+}
+
+.menu-container.active li:nth-of-type(6) a i {
+    transform: rotate(130deg)
+}
+
+.menu-container.active li:nth-of-type(7) a i {
+    transform: rotate(85deg)
+}
+
+a .menu-container.active li:nth-of-type(8) a i {
+    transform: rotate(-90deg)
+}
+
+
+.menu-container li:nth-of-type(1) a{
+    text-shadow: 0 0 25px #ff00ad,
+        0 0 30px #ff00ad,
+        0 0 35px #ff00ad, 0 0 40px #ff00ad, 0 0 45px #ff00ad;
+}
+.menu-container li:nth-of-type(1) a:hover,        .menu-container li:nth-of-type(2) a:hover,        .menu-container li:nth-of-type(3) a:hover,        .menu-container li:nth-of-type(4) a:hover,        .menu-container li:nth-of-type(5) a:hover,        .menu-container li:nth-of-type(6) a:hover,        .menu-container li:nth-of-type(7) a:hover,        .menu-container li:nth-of-type(8) a:hover{
+    text-shadow: none;
+}
+.menu-container li:nth-of-type(2) a{
+    text-shadow: 0 0 25px #00ff00,
+        0 0 30px #00ff00,
+        0 0 35px #00ff00, 0 0 40px #00ff00, 0 0 45px #00ff00;
+}
+
+.menu-container li:nth-of-type(3) a{
+    text-shadow: 0 0 25px #00dbff,
+        0 0 30px #00dbff,
+        0 0 35px #00dbff, 0 0 40px #00dbff, 0 0 45px #00dbff;
+}
+.menu-container li:nth-of-type(4) a{
+    text-shadow: 0 0 25px #006bff,
+        0 0 30px #006bff,
+        0 0 35px #006bff, 0 0 40px #006bff, 0 0 45px #006bff;
+}
+.menu-container li:nth-of-type(5) a{
+    text-shadow: 0 0 25px #ff00ad,
+        0 0 30px #ff00ad,
+        0 0 35px #ff00ad, 0 0 40px #ff00ad, 0 0 45px #ff00ad;
+}
+.menu-container li:nth-of-type(6) a{
+    text-shadow: 0 0 25px #00ff00,
+        0 0 30px #00ff00,
+        0 0 35px #00ff00, 0 0 40px #00ff00, 0 0 45px #00ff00;
+}
+.menu-container li:nth-of-type(7) a{
+    text-shadow: 0 0 25px #ff3d00,
+        0 0 30px #ff3d00,
+        0 0 35px #ff3d00, 0 0 40px #ff3d00, 0 0 45px #ff3d00;
+}
+.menu-container li:nth-of-type(8) a{
+    text-shadow: 0 0 25px #0066ff,
+        0 0 30px #0066ff,
+        0 0 35px #0066ff, 0 0 40px #0066ff, 0 0 45px #0066ff
+}
+.menu-container li a:hover{
+    text-shadow: transparent !important;
+}
